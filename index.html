@@ -68,12 +68,9 @@ output.</p>
 <dl class="function">
 <dt id="pyvenn.do_venn">
 <tt class="descclassname">pyvenn.</tt><tt class="descname">do_venn</tt><big>(</big><em>A</em>, <em>B</em>, <em>C</em>, <em>plot_fn=None</em><big>)</big><a class="headerlink" href="#pyvenn.do_venn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a venn diagram figure with the specified membership numbers:</p>
-<div class="highlight-python"><pre>- *A* is the # in class A
-- *B* is the # in class B
-- *C* is the # in both A and B</pre>
-</div>
-<p>If <em>plot_fn</em> is not provided, no figure is written to disk and the
+<dd><p>Create a venn diagram figure with the specified membership numbers. <em>A</em>
+is the # in class A, <em>B</em> is the # in class B, and <em>C</em> is the # in both A
+and B.  If <em>plot_fn</em> is not provided, no figure is written to disk and the
 matplotlib.Axis object with the diagram drawn is returned.</p>
 </dd></dl>
 
@@ -121,12 +118,9 @@ numpy arrays, n is the number of points making up the curve.</p>
 <dt id="pyvenn.find_best_d">
 <tt class="descclassname">pyvenn.</tt><tt class="descname">find_best_d</tt><big>(</big><em>A</em>, <em>B</em>, <em>C</em><big>)</big><a class="headerlink" href="#pyvenn.find_best_d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine the optimal radii, distance from circle origins, and
-coordinates where circle edges intersect for given proportions:</p>
-<div class="highlight-python"><pre>- *A* is the # in class A
-- *B* is the # in class B
-- *C* is the # in class A and B</pre>
-</div>
-<p>Returns 4-tuple of (A radus, B radius, distance between, intersections).
+coordinates where circle edges intersect for given proportions. <em>A</em> is the
+# in class A, <em>B</em> is the # in class B, and <em>C</em> is the # in class A and B. 
+Returns 4-tuple of (A radus, B radius, distance between, intersections).
 Intersections is a 2-tuple of 2-tuple cartesian coordinates in the
 coordinate system set by the origin of circle A is (0,0).</p>
 </dd></dl>
