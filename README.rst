@@ -17,3 +17,5 @@ Example::
 
 This example code is at the bottom of pyvenn.py.  Look at venn.png for example
 output.
+
+.. image:: venn.png
