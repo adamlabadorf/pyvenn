@@ -172,3 +172,6 @@ if __name__ == '__main__' :
     do_venn(100, 50, 40)
 
     show()
+
+    do_venn(100, 50, 40,plot_fn='venn.png')
+
