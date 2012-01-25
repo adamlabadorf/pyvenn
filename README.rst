@@ -18,4 +18,4 @@ Example::
 This example code is at the bottom of pyvenn.py.  Look at venn.png for example
 output.
 
-.. image:: venn.png
+.. image:: https://github.com/adamlabadorf/pyvenn/blob/master/venn.png
