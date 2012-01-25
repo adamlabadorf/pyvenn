@@ -63,45 +63,72 @@
 <p>This example code is at the bottom of pyvenn.py.  Look at venn.png for example
 output.</p>
 <img alt="venn.png" src="venn.png" />
-<span class="target" id="module-pyvenn"></span><p>This is the function you&#8217;ll probably want to use:</p>
+<span class="target" id="module-pyvenn"></span><p>General purpose library for producing 2-D Venn diagram graphics in python.</p>
+<p>This is the function you&#8217;ll probably want to use:</p>
 <dl class="function">
 <dt id="pyvenn.do_venn">
 <tt class="descclassname">pyvenn.</tt><tt class="descname">do_venn</tt><big>(</big><em>A</em>, <em>B</em>, <em>C</em>, <em>plot_fn=None</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#do_venn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.do_venn" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Create a venn diagram figure with the specified membership numbers:</p>
+<div class="highlight-python"><pre>- *A* is the # in class A
+- *B* is the # in class B
+- *C* is the # in both A and B</pre>
+</div>
+<p>If <em>plot_fn</em> is not provided, no figure is written to disk and the
+matplotlib.Axis object with the diagram drawn is returned.</p>
+</dd></dl>
 
 <p>These are helper functions that you probably won&#8217;t need to use but are included
 nonetheless:</p>
 <dl class="function">
 <dt id="pyvenn.bezier_circle">
 <tt class="descclassname">pyvenn.</tt><tt class="descname">bezier_circle</tt><big>(</big><em>origin</em>, <em>radius</em>, <em>n</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#bezier_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.bezier_circle" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Construct a set of points of a circle centered around <em>origin</em> using
+quadratic bezier curves functions.  <em>n</em> is the number of points desired.</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="pyvenn.trig_circle">
 <tt class="descclassname">pyvenn.</tt><tt class="descname">trig_circle</tt><big>(</big><em>origin</em>, <em>radius</em>, <em>n</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#trig_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.trig_circle" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Construct a set of points of a circle centered around <em>origin</em> using
+trigonomic functions.  <em>n</em> is the number of points desired.</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="pyvenn.quadratic_bezier_curve">
 <tt class="descclassname">pyvenn.</tt><tt class="descname">quadratic_bezier_curve</tt><big>(</big><em>p0</em>, <em>p1</em>, <em>p2</em>, <em>n=10</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#quadratic_bezier_curve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.quadratic_bezier_curve" title="Permalink to this definition">¶</a></dt>
-<dd><p>p0, p1, and p2 are length 2 vectors, n is the number of points making up the curve</p>
+<dd><p>Returns a set of points representing the quadratic bezier curve with
+p0, p1, and p2 as reference points.  Reference point arguments are length 2
+numpy arrays, n is the number of points making up the curve.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvenn.quadratic_bezier_point">
 <tt class="descclassname">pyvenn.</tt><tt class="descname">quadratic_bezier_point</tt><big>(</big><em>p0</em>, <em>p1</em>, <em>p2</em>, <em>t</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#quadratic_bezier_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.quadratic_bezier_point" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns the bezier point returned with p0, p1, and p2 as reference points
+at fraction t along curve.  Reference point arguments are length 2
+numpy arrays.</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="pyvenn.cubic_bezier_curve">
 <tt class="descclassname">pyvenn.</tt><tt class="descname">cubic_bezier_curve</tt><big>(</big><em>p0</em>, <em>p1</em>, <em>p2</em>, <em>p3</em>, <em>n</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#cubic_bezier_curve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.cubic_bezier_curve" title="Permalink to this definition">¶</a></dt>
-<dd><p>p0, p1, p2, and p3 are length 2 vectors, n is the number of points making up the curve</p>
+<dd><p>Returns a set of points representing the cubic bezier curve with
+p0, p1, p2, and p3 as reference points.  p0, p1, p2, and p3 are length 2
+numpy arrays, n is the number of points making up the curve.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvenn.find_best_d">
 <tt class="descclassname">pyvenn.</tt><tt class="descname">find_best_d</tt><big>(</big><em>A</em>, <em>B</em>, <em>C</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#find_best_d"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.find_best_d" title="Permalink to this definition">¶</a></dt>
-<dd><p>A - total # in A, B - total # in B, C - total # in overlap</p>
+<dd><p>Determine the optimal radii, distance from circle origins, and
+coordinates where circle edges intersect for given proportions:</p>
+<div class="highlight-python"><pre>- *A* is the # in class A
+- *B* is the # in class B
+- *C* is the # in class A and B</pre>
+</div>
+<p>Returns 4-tuple of (A radus, B radius, distance between, intersections).
+Intersections is a 2-tuple of 2-tuple cartesian coordinates in the
+coordinate system set by the origin of circle A is (0,0).</p>
 </dd></dl>
 
 </div>
