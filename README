@@ -15,4 +15,5 @@ Example::
  >>> show()
  >>> do_venn(100, 50, 40,plot_fn='venn.png')
 
-.. image:: venn.png
+This example code is at the bottom of pyvenn.py.  Look at venn.png for example
+output.
