@@ -6,10 +6,24 @@
 Welcome to pyvenn's documentation!
 ==================================
 
-Contents:
+This is all the documentation for this module.
 
-.. toctree::
-   :maxdepth: 2
+.. automodule:: pyvenn
+
+This is the function you'll probably want to use:
+
+.. autofunction:: do_venn
+
+These are helper functions that you probably won't need to use but are included
+nonetheless:
+
+.. autofunction:: bezier_circle
+.. autofunction:: trig_circle
+.. autofunction:: quadratic_bezier_curve
+.. autofunction:: quadratic_bezier_point
+.. autofunction:: cubic_bezier_curve
+.. autofunction:: find_best_d
+
 
 Indices and tables
 ==================

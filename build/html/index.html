@@ -3,13 +3,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to pyvenn’s documentation! &mdash; pyvenn v1.0 documentation</title>
+    <title>Welcome to pyvenn’s documentation! &mdash; pyvenn 1.0 documentation</title>
+    
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
@@ -22,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pyvenn v1.0 documentation" href="#" /> 
+    <link rel="top" title="pyvenn 1.0 documentation" href="#" /> 
   </head>
   <body>
     <div class="related">
@@ -31,7 +34,10 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li><a href="#">pyvenn v1.0 documentation</a> &raquo;</li> 
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="#">pyvenn 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -42,11 +48,48 @@
             
   <div class="section" id="welcome-to-pyvenn-s-documentation">
 <h1>Welcome to pyvenn&#8217;s documentation!<a class="headerlink" href="#welcome-to-pyvenn-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
-<div class="toctree-wrapper compound">
-<ul class="simple">
-</ul>
-</div>
+<p>This is all the documentation for this module.</p>
+<span class="target" id="module-pyvenn"></span><p>This is the function you&#8217;ll probably want to use:</p>
+<dl class="function">
+<dt id="pyvenn.do_venn">
+<tt class="descclassname">pyvenn.</tt><tt class="descname">do_venn</tt><big>(</big><em>A</em>, <em>B</em>, <em>C</em>, <em>plot_fn=None</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#do_venn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.do_venn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>These are helper functions that you probably won&#8217;t need to use but are included
+nonetheless:</p>
+<dl class="function">
+<dt id="pyvenn.bezier_circle">
+<tt class="descclassname">pyvenn.</tt><tt class="descname">bezier_circle</tt><big>(</big><em>origin</em>, <em>radius</em>, <em>n</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#bezier_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.bezier_circle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pyvenn.trig_circle">
+<tt class="descclassname">pyvenn.</tt><tt class="descname">trig_circle</tt><big>(</big><em>origin</em>, <em>radius</em>, <em>n</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#trig_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.trig_circle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pyvenn.quadratic_bezier_curve">
+<tt class="descclassname">pyvenn.</tt><tt class="descname">quadratic_bezier_curve</tt><big>(</big><em>p0</em>, <em>p1</em>, <em>p2</em>, <em>n=10</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#quadratic_bezier_curve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.quadratic_bezier_curve" title="Permalink to this definition">¶</a></dt>
+<dd><p>p0, p1, and p2 are length 2 vectors, n is the number of points making up the curve</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyvenn.quadratic_bezier_point">
+<tt class="descclassname">pyvenn.</tt><tt class="descname">quadratic_bezier_point</tt><big>(</big><em>p0</em>, <em>p1</em>, <em>p2</em>, <em>t</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#quadratic_bezier_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.quadratic_bezier_point" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pyvenn.cubic_bezier_curve">
+<tt class="descclassname">pyvenn.</tt><tt class="descname">cubic_bezier_curve</tt><big>(</big><em>p0</em>, <em>p1</em>, <em>p2</em>, <em>p3</em>, <em>n</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#cubic_bezier_curve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.cubic_bezier_curve" title="Permalink to this definition">¶</a></dt>
+<dd><p>p0, p1, p2, and p3 are length 2 vectors, n is the number of points making up the curve</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyvenn.find_best_d">
+<tt class="descclassname">pyvenn.</tt><tt class="descname">find_best_d</tt><big>(</big><em>A</em>, <em>B</em>, <em>C</em><big>)</big><a class="reference internal" href="_modules/pyvenn.html#find_best_d"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pyvenn.find_best_d" title="Permalink to this definition">¶</a></dt>
+<dd><p>A - total # in A, B - total # in B, C - total # in overlap</p>
+</dd></dl>
+
 </div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
@@ -65,9 +108,7 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Welcome to pyvenn&#8217;s documentation!</a><ul>
-</ul>
-</li>
+<li><a class="reference internal" href="#">Welcome to pyvenn&#8217;s documentation!</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 
@@ -79,7 +120,7 @@
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" size="18" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
@@ -99,12 +140,15 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
-        <li><a href="#">pyvenn v1.0 documentation</a> &raquo;</li> 
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="#">pyvenn 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2012, Adam Labadorf.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0b1.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
     </div>
   </body>
 </html>
