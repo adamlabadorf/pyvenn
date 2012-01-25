@@ -61,12 +61,8 @@ def trig_circle(origin,radius,n) :
 
 def find_best_d(A,B,C) :
     """Determine the optimal radii, distance from circle origins, and
-    coordinates where circle edges intersect for given proportions::
-
-      - *A* is the # in class A
-      - *B* is the # in class B
-      - *C* is the # in class A and B
-
+    coordinates where circle edges intersect for given proportions. *A* is the
+    # in class A, *B* is the # in class B, and *C* is the # in class A and B. 
     Returns 4-tuple of (A radus, B radius, distance between, intersections).
     Intersections is a 2-tuple of 2-tuple cartesian coordinates in the
     coordinate system set by the origin of circle A is (0,0).
@@ -128,13 +124,9 @@ ax.plot(x,y,'g-')
 """
 
 def do_venn(A,B,C,plot_fn=None) :
-    """Create a venn diagram figure with the specified membership numbers::
-
-      - *A* is the # in class A
-      - *B* is the # in class B
-      - *C* is the # in both A and B
-
-    If *plot_fn* is not provided, no figure is written to disk and the
+    """Create a venn diagram figure with the specified membership numbers. *A*
+    is the # in class A, *B* is the # in class B, and *C* is the # in both A
+    and B.  If *plot_fn* is not provided, no figure is written to disk and the
     matplotlib.Axis object with the diagram drawn is returned.
     """
 
