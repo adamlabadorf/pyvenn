@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # pyvenn documentation build configuration file, created by
-# sphinx-quickstart on Wed Jan 25 15:37:39 2012.
+# sphinx-quickstart on Wed Jan 25 15:53:50 2012.
 #
 # This file is execfile()d with the current directory set to its containing dir.
 #
@@ -16,7 +16,7 @@ import sys, os
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
+#sys.path.append(os.path.abspath('.'))
 
 # -- General configuration -----------------------------------------------------
 
@@ -28,7 +28,7 @@ import sys, os
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.coverage', 'sphinx.ext.viewcode']
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['pyvenn_templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -89,8 +89,8 @@ pygments_style = 'sphinx'
 
 # -- Options for HTML output ---------------------------------------------------
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
+# The theme to use for HTML and HTML Help pages.  Major themes that come with
+# Sphinx are currently 'default' and 'sphinxdoc'.
 html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -120,7 +120,7 @@ html_theme = 'default'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ['pyvenn_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -160,8 +160,8 @@ html_static_path = ['_static']
 # base URL from which the finished HTML is served.
 #html_use_opensearch = ''
 
-# This is the file name suffix for HTML files (e.g. ".xhtml").
-#html_file_suffix = None
+# If nonempty, this is the file name suffix for HTML files (e.g. ".xhtml").
+#html_file_suffix = ''
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'pyvenndoc'
@@ -169,16 +169,11 @@ htmlhelp_basename = 'pyvenndoc'
 
 # -- Options for LaTeX output --------------------------------------------------
 
-latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+# The paper size ('letter' or 'a4').
+#latex_paper_size = 'letter'
 
 # The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
-
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
-}
+#latex_font_size = '10pt'
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
@@ -201,6 +196,9 @@ latex_documents = [
 # If true, show URL addresses after external links.
 #latex_show_urls = False
 
+# Additional stuff for the LaTeX preamble.
+#latex_preamble = ''
+
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []
 
@@ -216,26 +214,3 @@ man_pages = [
     ('index', 'pyvenn', u'pyvenn Documentation',
      [u'Adam Labadorf'], 1)
 ]
-
-# If true, show URL addresses after external links.
-#man_show_urls = False
-
-
-# -- Options for Texinfo output ------------------------------------------------
-
-# Grouping the document tree into Texinfo files. List of tuples
-# (source start file, target name, title, author,
-#  dir menu entry, description, category)
-texinfo_documents = [
-  ('index', 'pyvenn', u'pyvenn Documentation', u'Adam Labadorf',
-   'pyvenn', 'One line description of project.', 'Miscellaneous'),
-]
-
-# Documents to append as an appendix to all manuals.
-#texinfo_appendices = []
-
-# If false, no module index is generated.
-#texinfo_domain_indices = True
-
-# How to display URL addresses: 'footnote', 'no', or 'inline'.
-#texinfo_show_urls = 'footnote'
