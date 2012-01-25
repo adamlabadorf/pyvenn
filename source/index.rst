@@ -11,6 +11,8 @@ such that their relative size and area of overlap are proportionate to the
 numbers supplied for each class.  It can be used interactively in an interpreter
 with matplotlib or to output to file for batch figure generation.
 
+You can get the software from `github <https://github.com/adamlabadorf/pyvenn>`_.
+
 Example:
 
   >>> from pyvenn import do_venn
