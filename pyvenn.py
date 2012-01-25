@@ -77,8 +77,6 @@ def find_best_d(A,B,C) :
     A_area = A/max_class
     B_area = B/max_class
     C_area = C/max_class
-    print A, B, C
-    print A_area, B_area, C_area
 
     A_radius = math.sqrt(A_area/math.pi)
     B_radius = math.sqrt(B_area/math.pi)
