@@ -22,7 +22,7 @@ Example:
 This example code is at the bottom of pyvenn.py.  Look at venn.png for example
 output.
 
-.. image:: https://github.com/adamlabadorf/pyvenn/raw/master/venn.png
+.. image:: venn.png
 
 .. automodule:: pyvenn
 
