@@ -1,3 +1,7 @@
+"""
+General purpose library for producing 2-D Venn diagram graphics in python.
+"""
+
 import math
 import matplotlib.pyplot as mp
 import numpy
