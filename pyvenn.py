@@ -123,11 +123,19 @@ x,y = zip(*circle_pts)
 ax.plot(x,y,'g-')
 """
 
-def do_venn(A,B,C,plot_fn=None) :
+def do_venn(A,B,C,plot_fn=None,
+            A_label='A',A_color='b',
+            B_label='B',B_color='r',
+            title=None
+            ) :
     """Create a venn diagram figure with the specified membership numbers. *A*
     is the # in class A, *B* is the # in class B, and *C* is the # in both A
-    and B.  If *plot_fn* is not provided, no figure is written to disk and the
-    matplotlib.Axis object with the diagram drawn is returned.
+    and B.  *plot_fn* supports any matplotlib compatible extensions and if
+    it is not provided, no figure is written to disk and the matplotlib.Axis
+    object with the diagram drawn is returned. *A_label* and *B_label* control
+    labels of a legend drawn at the top of the figure.  *A_color* and *B_color*
+    are matplotlib colors. *title*, if supplied, is drawn at the top of the
+    figure.
     """
 
     A_radius, B_radius, d, intersect = find_best_d(A,B,C)
@@ -141,18 +149,26 @@ def do_venn(A,B,C,plot_fn=None) :
 
     A_circle = trig_circle((A_radius,A_radius),A_radius,80)
     x,y = zip(*A_circle)
-    venn_ax.fill(x,y,'b-',alpha=0.8)
+    venn_ax.fill(x,y,linestyle='solid',edgecolor='k',facecolor=A_color,alpha=0.8)
 
     B_circle = trig_circle((A_radius+d,A_radius),B_radius,80)
     x,y = zip(*B_circle)
-    venn_ax.fill(x,y,'r-',alpha=0.8)
+    venn_ax.fill(x,y,linestyle='solid',edgecolor='k',facecolor=B_color,alpha=0.8)
 
-    #x,y = zip(*intersect)
-    #x = [x_i+A_radius for x_i in x]
-    #y = [y_i+A_radius for y_i in y]
-    #venn_ax.plot(x,y,'ro')
+    if title is not None :
+        venn_ax.set_title(title)
 
-    venn_ax.set_title('A=%d A+B=%d B=%d'%(A-C,C,B-C))
+    # draw a legend
+    box_dims = dims_x, dims_y = numpy.array((0,0.1,0.1,0)), numpy.array((0,0,0.1,0.1))
+    venn_ax.fill(dims_x,fig_height-dims_y,ls='solid',ec='k',fc=A_color)
+    venn_ax.text(0.12,fig_height-0.075,A_label)
+    venn_ax.text(-.05*len(str(A-C))-0.05,A_radius-0.05,A-C)
+
+    venn_ax.fill(dims_x+fig_width/2,fig_height-dims_y,ls='solid',ec='k',fc=B_color)
+    venn_ax.text(fig_width/2+0.12,fig_height-0.075,B_label)
+    venn_ax.text(A_radius+d+B_radius+0.05,A_radius-0.05,B-C)
+
+    venn_ax.text(A_radius+d/2-0.05*len(str(C))/2,A_radius-0.05,C,color='white')
     venn_ax.axis('equal')
 
     if plot_fn is not None :
