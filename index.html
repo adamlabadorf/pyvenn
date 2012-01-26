@@ -71,11 +71,15 @@ output.</p>
 <p>This is the function you&#8217;ll probably want to use:</p>
 <dl class="function">
 <dt id="pyvenn.do_venn">
-<tt class="descclassname">pyvenn.</tt><tt class="descname">do_venn</tt><big>(</big><em>A</em>, <em>B</em>, <em>C</em>, <em>plot_fn=None</em><big>)</big><a class="headerlink" href="#pyvenn.do_venn" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">pyvenn.</tt><tt class="descname">do_venn</tt><big>(</big><em>A</em>, <em>B</em>, <em>C</em>, <em>plot_fn=None</em>, <em>A_label='A'</em>, <em>A_color='b'</em>, <em>B_label='B'</em>, <em>B_color='r'</em>, <em>title=None</em><big>)</big><a class="headerlink" href="#pyvenn.do_venn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a venn diagram figure with the specified membership numbers. <em>A</em>
 is the # in class A, <em>B</em> is the # in class B, and <em>C</em> is the # in both A
-and B.  If <em>plot_fn</em> is not provided, no figure is written to disk and the
-matplotlib.Axis object with the diagram drawn is returned.</p>
+and B.  <em>plot_fn</em> supports any matplotlib compatible extensions and if
+it is not provided, no figure is written to disk and the matplotlib.Axis
+object with the diagram drawn is returned. <em>A_label</em> and <em>B_label</em> control
+labels of a legend drawn at the top of the figure.  <em>A_color</em> and <em>B_color</em>
+are matplotlib colors. <em>title</em>, if supplied, is drawn at the top of the
+figure.</p>
 </dd></dl>
 
 <p>These are helper functions that you probably won&#8217;t need to use but are included
